@@ -6,9 +6,8 @@
         Filename: script.js
 */
 
-"use strict"
-
-var formValidity = true;
+"use strict";
+var formValidity = false;
 
 // function to validate form
 function validateForm(evt) {
@@ -24,8 +23,5 @@ function createEventListeners() {
     window.addEventListener("submit", validateForm);
 }
 
-if (window.addEventListener) {
-    window.addEventListener("load", setUpPage, false);
-} else if (window.attachEvent) {
-    window.addEventListener("onload", setUpPage);
-}
+// load event listener
+window.addEventListener("load", createEventListeners);
